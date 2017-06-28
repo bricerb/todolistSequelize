@@ -1,0 +1,46 @@
+body {
+  background: silver;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+}
+
+.cell {
+  display: flex;
+  display: row;
+}
+
+.link-button {
+  background: white;
+  border: solid black 1px;
+  width: 80%;
+  text-align: center;
+  transition-duration: .75s;
+}
+
+.link-button:hover {
+  background: black;
+  color: white;
+  transition-duration: .75s;
+  border: solid black 1px;
+}
+
+.link-button p {
+  margin: 2px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  flex-basis: 10%;
+}
+
+.cell {
+
+}
