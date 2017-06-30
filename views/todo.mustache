@@ -13,33 +13,34 @@
         <input type="text" name="todo" placeholder="Name">
         <input type="submit" value="Add Item">
       </form>
+      <hr>
+      <h2>Completed Items</h2>
         {{#todo}}
           <div class="cell">
-            {{#status}}
-              <a href="/{{i}}">
-                <div class="link-button">
-                  <p>Complete</p>
-                </div>
-              </a>
-              {{todo}}
-            {{/status}}
-            {{^status}}
-              <a href="/{{i}}">
+            {{^complete}}
+              <a href="/update/{{id}}">
                 <div class="link-button">
                   <p>Incomplete</p>
                 </div>
               </a>
               {{todo}}
-            {{/status}}
+            {{/complete}}
           </div>
         </div>
         {{/todo}}
         <hr>
         <h2>Completed Items</h2>
         {{#todo}}
-          {{#status}}
-            <li>{{todo}}</li>
-          {{/status}}
+          <div class="cell">
+            {{#complete}}
+              <a href="/delete/{{id}}">
+                <div class="link-button">
+                  <p>Delete</p>
+                </div>
+              </a>
+              {{todo}}
+            {{/complete}}
+          </div>
         {{/todo}}
   </body>
 </html>
